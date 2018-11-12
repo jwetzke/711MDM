@@ -1,1 +1,15 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="Facility">
+<xsd:complexType>
+<xsd:all>
+<xsd:element name="FacilityId" type="xsd:string"/>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="Facility">
+<xsd:selector xpath="."/>
+<xsd:field xpath="FacilityId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="Facility_ID" type="xsd:int"/>
+<xsd:element name="Facility_Name" type="xsd:string"/>
+</xsd:schema>
